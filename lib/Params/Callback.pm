@@ -5,7 +5,7 @@ use Params::Validate ();
 use Params::CallbackRequest::Exceptions (abbr => [qw(throw_bad_params)]);
 
 use vars qw($VERSION);
-$VERSION = '1.12';
+$VERSION = '1.13';
 use constant DEFAULT_PRIORITY => 5;
 use constant REDIRECT => 302;
 
@@ -17,6 +17,10 @@ Params::Validate::validation_options
 
 my $is_num = { 'valid priority' => sub { $_[0] =~ /^\d$/ } };
 
+# Use Apache::RequestRec for mod_perl 2
+my $ap_req_class = defined $mod_perl::VERSION && $mod_perl::VERSION >= 1.99
+  ? 'Apache::RequestRec'
+  : 'Apache';
 
 BEGIN {
     # The object-oriented interface is only supported with the use of
@@ -56,7 +60,7 @@ my %valid_params =
     },
 
     apache_req   =>
-    { isa        => 'Apache',
+    { isa        => $ap_req_class,
       optional   => 1,
     },
 
