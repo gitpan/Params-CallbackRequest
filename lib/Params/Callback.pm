@@ -5,7 +5,7 @@ use Params::Validate ();
 use Params::CallbackRequest::Exceptions (abbr => [qw(throw_bad_params)]);
 
 use vars qw($VERSION);
-$VERSION = '1.13';
+$VERSION = '1.14';
 use constant DEFAULT_PRIORITY => 5;
 use constant REDIRECT => 302;
 
@@ -19,8 +19,10 @@ my $is_num = { 'valid priority' => sub { $_[0] =~ /^\d$/ } };
 
 # Use Apache::RequestRec for mod_perl 2
 my $ap_req_class = defined $mod_perl::VERSION && $mod_perl::VERSION >= 1.99
-  ? 'Apache::RequestRec'
-  : 'Apache';
+    ? 'Apache::RequestRec'
+    : defined $mod_perl2::VERSION
+        ? 'Apache2::RequestRec'
+        : 'Apache';
 
 BEGIN {
     # The object-oriented interface is only supported with the use of
@@ -29,10 +31,8 @@ BEGIN {
     # that we can tell ApacheHandler::WithCallbacks that they exist and
     # are loaded.
     unless ($] < 5.006) {
-        eval {
-            require Attribute::Handlers;
-            require Class::ISA;
-        }
+        require Attribute::Handlers;
+        require Class::ISA;
     }
 
     # Build read-only accessors.
@@ -1032,7 +1032,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003 by David Wheeler
+Copyright 2003-2004 David Wheeler
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

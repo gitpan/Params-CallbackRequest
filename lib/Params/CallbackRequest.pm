@@ -7,7 +7,7 @@ use Params::CallbackRequest::Exceptions (abbr => [qw(throw_bad_params
                                                      throw_cb_exec)]);
 
 use vars qw($VERSION);
-$VERSION = '1.13';
+$VERSION = '1.14';
 
 BEGIN {
     for my $attr (qw( default_priority
@@ -348,11 +348,11 @@ Functional parameter-triggered callbacks:
   }
 
   # Set up a callback request object.
-  my $cb_request = Params::CallbackRequest
-    ( callbacks => [ { cb_key  => 'calc_time',
+  my $cb_request = Params::CallbackRequest->new(
+      callbacks => [ { cb_key  => 'calc_time',
                        pkg_key => 'myCallbacker',
                        cb      => \&calc_time } ]
-    );
+  );
 
   # Request callback execution.
   my %params = ('myCallbacker|calc_time_cb' => 1);
@@ -1010,8 +1010,7 @@ independent of previous implementations.
 
 =head1 BUGS
 
-Please report all bugs via the CPAN Request Tracker at
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Params-CallbackRequest>.
+Please send bug reports to <bug-params-callbackrequest@rt.cpan.org>.
 
 =head1 SEE ALSO
 
@@ -1030,7 +1029,7 @@ David Wheeler <david@kineticode.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003 by David Wheeler
+Copyright 2003-2004 David Wheeler
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

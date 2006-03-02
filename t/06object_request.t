@@ -1,6 +1,6 @@
 #!perl -w
 
-# $Id: 06object_request.t,v 1.3 2003/10/08 19:27:06 david Exp $
+# $Id: 06object_request.t 682 2004-09-28 05:59:10Z theory $
 
 use strict;
 use Test::More;

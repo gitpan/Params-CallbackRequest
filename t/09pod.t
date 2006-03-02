@@ -1,6 +1,6 @@
 #!perl -w
 
-# $Id: 09pod.t,v 1.1 2003/08/14 05:23:22 david Exp $
+# $Id: 09pod.t 682 2004-09-28 05:59:10Z theory $
 
 use Test::More;
 use File::Spec;

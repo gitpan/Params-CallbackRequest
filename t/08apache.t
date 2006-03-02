@@ -1,6 +1,6 @@
 #!perl -w
 
-# $Id: 08apache.t,v 1.2 2003/08/19 17:39:08 david Exp $
+# $Id: 08apache.t 682 2004-09-28 05:59:10Z theory $
 
 use strict;
 use Test::More;

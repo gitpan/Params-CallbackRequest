@@ -1,4 +1,4 @@
-Params/CallbackRequest version 1.13
+Params/CallbackRequest version 1.14
 ===================================
 
 Params::CallbackRequest provides functional and object-oriented callbacks to
@@ -51,7 +51,7 @@ The test suite requires:
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2003 David Wheeler
+Copyright (C) 2003-2004 David Wheeler
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
