@@ -1,6 +1,6 @@
 #!perl -w
 
-# $Id: 05object.t 682 2004-09-28 05:59:10Z theory $
+# $Id: 05object.t 682 2004-09-28 05:59:10Z david $
 
 use strict;
 use Test::More;

@@ -1,5 +1,10 @@
 Revision history for Perl extension Params::CallbackRequest.
 
+1.18  2008-05-03T23:44:20
+      - Updated POD test to take advantage of Test::Pod 1.20 or later.
+      - Reformatted the code a bit.
+      - Added a link to the Subversion repository.
+
 1.17  2007-03-27T16:21:34
       - Updated copyright date.
       - Now requiring (rather than recommending) Class::ISA and
@@ -11,6 +16,8 @@ Revision history for Perl extension Params::CallbackRequest.
       - Fixed a bug detecting mod_perl2. Reported by Jimmy Li.
       - Fixed a bug in the redirect() method under mod_perl2. Report and fix
         from Jimmy Li.
+      - Added the "configure_requires" parameter to Build.PL and added
+        Test::Pod to the "recommends" parameter.
 
 1.15  2006-05-26T21:28:55
       - Added the 'requester' attribute to Params::Callback. This can be
