@@ -1,11 +1,12 @@
 package Params::Callback;
 
 use strict;
+require 5.006;
 use Params::Validate ();
 use Params::CallbackRequest::Exceptions (abbr => [qw(throw_bad_params)]);
 
 use vars qw($VERSION);
-$VERSION = '1.18';
+$VERSION = '1.19';
 use constant DEFAULT_PRIORITY => 5;
 use constant REDIRECT => 302;
 
@@ -1042,6 +1043,15 @@ priority?
 L<Params::CallbackRequest|Params::CallbackRequest> constructs Params::Callback
 objects and executes the appropriate callback functions and/or methods. It's
 worth a read.
+
+=head1 SUPPORT
+
+This module is stored in an open repository at the following address:
+
+L<https://svn.kineticode.com/Params-CallbackRequest/trunk/>
+
+Patches against Params::CallbackRequest are welcome. Please send bug reports
+to <bug-params-callbackrequest@rt.cpan.org>.
 
 =head1 AUTHOR
 
