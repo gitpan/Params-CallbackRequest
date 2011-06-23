@@ -7,7 +7,7 @@ use Params::CallbackRequest::Exceptions (abbr => [qw(throw_bad_params
                                                      throw_cb_exec)]);
 
 use vars qw($VERSION);
-$VERSION = '1.19';
+$VERSION = '1.20';
 
 BEGIN {
     for my $attr (qw( default_priority
@@ -1023,20 +1023,22 @@ module to provide a callback architecture for HTML::Mason.
 
 =head1 SUPPORT
 
-This module is stored in an open repository at the following address:
+This module is stored in an open L<GitHub
+repository|http://github.com/theory/params-callbackrequest/>. Feel free to
+fork and contribute!
 
-L<https://svn.kineticode.com/Params-CallbackRequest/trunk/>
-
-Patches against Params::CallbackRequest are welcome. Please send bug reports
-to <bug-params-callbackrequest@rt.cpan.org>.
+Please file bug reports via L<GitHub
+Issues|http://github.com/theory/params-callbackrequest/issues/> or by sending
+mail to
+L<bug-params-callbackrequest@rt.cpan.org|mailto:bug-params-callbackrequest@rt.cpan.org>.
 
 =head1 AUTHOR
 
-David Wheeler <david@kineticode.com>
+David E. Wheeler <david@justatheory.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003-2008 David Wheeler. Some Rights Reserved.
+Copyright 2003-2011 David E. Wheeler. Some Rights Reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

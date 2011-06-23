@@ -6,7 +6,7 @@ use Params::Validate ();
 use Params::CallbackRequest::Exceptions (abbr => [qw(throw_bad_params)]);
 
 use vars qw($VERSION);
-$VERSION = '1.19';
+$VERSION = '1.20';
 use constant DEFAULT_PRIORITY => 5;
 use constant REDIRECT => 302;
 
@@ -1055,11 +1055,11 @@ to <bug-params-callbackrequest@rt.cpan.org>.
 
 =head1 AUTHOR
 
-David Wheeler <david@kineticode.com>
+David E. Wheeler <david@justatheory.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003-2008 David Wheeler. Some Rights Reserved.
+Copyright 2003-2011 David E. Wheeler. Some Rights Reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.

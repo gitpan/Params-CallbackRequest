@@ -1,9 +1,7 @@
-#!perl -w
-
-# $Id: 09pod.t 3737 2008-05-03 23:32:15Z david $
+#!/usr/bin/perl -w
 
 use strict;
 use Test::More;
-eval "use Test::Pod 1.20";
-plan skip_all => "Test::Pod 1.20 required for testing POD" if $@;
+eval "use Test::Pod 1.41";
+plan skip_all => "Test::Pod 1.41 required for testing POD" if $@;
 all_pod_files_ok(all_pod_files('bin', 'lib'));

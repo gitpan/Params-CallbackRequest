@@ -1,7 +1,5 @@
 #!perl -w
 
-# $Id: 06object_request.t 2862 2006-05-26 21:28:17Z david $
-
 use strict;
 use Test::More;
 my $base_key;
